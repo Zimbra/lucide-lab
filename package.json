@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
+  "main": "packages/lab/dist/cjs/lucide-lab.js",
+  "module": "packages/lab/dist/esm/lucide-lab.js",
+  "types": "packages/lab/dist/lucide-lab.d.ts",
+  "files": [
+    "packages/lab/dist"
+  ],
   "scripts": {
-    "compare": "bun ./scripts/compareIcons.ts"
+    "build": "cd packages/lab && npm run build"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@lucide/build-icons": "1.1.0",
-    "@lucide/helpers": "1.0.0"
+    "@lucide/helpers": "1.0.0",
+    "@types/bun": "latest",
+    "husky": "^9.1.7"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

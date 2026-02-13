@@ -1,0 +1,15 @@
+name: Check Dist
+
+on: [push, pull_request]
+
+jobs:
+  verify-dist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify dist exists
+        run: |
+          if [ ! -d "packages/lab/dist" ]; then
+            echo "dist folder missing"
+            exit 1
+          fi
