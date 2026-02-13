@@ -5,7 +5,6 @@
 .now
 .idea
 node_modules
-dist
 build
 sandbox
 stash
@@ -22,6 +21,7 @@ packages/**/dynamicIconImports.js
 packages/**/dynamicIconImports.d.ts
 packages/**/dynamicIconImports.js.map
 packages/**/LICENSE
+packages/lab/icons/
 categories.json
 tags.json
 .vercel
@@ -38,3 +38,7 @@ docs/.vitepress/data/iconDetails
 docs/.vitepress/data/relatedIcons.json
 docs/.vercel
 docs/.nitro
+
+# Allow lab build output
+!packages/lab/dist
+!packages/lab/dist/esm/icons/

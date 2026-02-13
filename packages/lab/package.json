@@ -3,11 +3,10 @@
   "description": "Lucide lab is a project with icons that are nicely designed but have unknown use cases.",
   "version": "0.1.2",
   "license": "ISC",
-  "homepage": "https://lucide.dev",
-  "bugs": "https://github.com/lucide-icons/lucide-lab/issues",
+  "homepage": "https://github.com/Zimbra/lucide-lab",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lucide-icons/lucide-lab.git"
+    "url": "https://github.com/Zimbra/lucide-lab.git"
   },
   "keywords": [
     "Lucide",
@@ -26,19 +25,24 @@
   "sideEffects": false,
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
-    "build": "pnpm clean && pnpm copy:license && pnpm build:icons && pnpm build:bundle && pnpm build:lib",
+    "build": "npm run clean && npm run copy:license && npm run build:icons && npm run build:bundle && npm run build:lib",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --exportModuleNameCasing=camel --renderUniqueKey --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
     "clean": "rm -f src/icons/*.ts && rm -rf dist",
-    "version": "pnpm version --git-tag-version=false"
+    "version": "npm run version --git-tag-version=false"
   },
   "devDependencies": {
+    "@lucide/build-icons": "^1.1.0",
+    "@lucide/helpers": "^1.0.0",
     "@lucide/rollup-plugins": "1.0.0",
     "minimist": "^1.2.8",
     "prettier": "^2.3.2",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
     "svgson": "^5.2.1"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
   }
 }
