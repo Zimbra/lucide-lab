@@ -1,2 +1,23 @@
-#!/usr/bin/env sh
-node scripts/ensure-dist.js
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+REQUIRED_NODE=18
+REQUIRED_NPM=10
+
+NODE_VERSION=$(node -v | cut -d. -f1 | sed 's/v//')
+NPM_VERSION=$(npm -v | cut -d. -f1)
+
+if [ "$NODE_VERSION" -lt "$REQUIRED_NODE" ]; then
+  echo "❌ Node 18+ is required. Current: $(node -v)"
+  exit 1
+fi
+
+if [ "$NPM_VERSION" -lt "$REQUIRED_NPM" ]; then
+  echo "❌ npm 10+ is required. Current: $(npm -v)"
+  exit 1
+fi
+
+echo "Running build..."
+npm run build || exit 1
+
+git add packages/lab/dist
