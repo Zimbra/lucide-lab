@@ -10,7 +10,8 @@
     "packages/lab/dist"
   ],
   "scripts": {
-    "build": "cd packages/lab && npm run build"
+    "prepare": "husky install",
+    "build": "cd packages/lab && npm i && npm run build"
   },
   "devDependencies": {
     "@lucide/build-icons": "1.1.0",
