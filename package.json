@@ -4,10 +4,6 @@
   "description": "",
   "private": true,
   "license": "ISC",
-  "scripts": {
-    "prepare": "husky || true",
-    "build": "cd packages/lab && npm i && npm run build"
-  },
   "devDependencies": {
     "husky": "^9.1.7"
   }

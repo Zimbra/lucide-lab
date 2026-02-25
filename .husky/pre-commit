@@ -18,6 +18,6 @@ if [ "$NPM_VERSION" -lt "$REQUIRED_NPM" ]; then
 fi
 
 echo "Running build..."
-npm run build || exit 1
+cd packages/lab && npm i && npm run build || exit 1
 
-git add packages/lab/dist
+git add dist
