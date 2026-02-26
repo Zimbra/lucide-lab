@@ -18,11 +18,13 @@
     "Fontawesome",
     "Font Awesome"
   ],
-  "source": "src/lucide-lab.js",
   "main": "dist/cjs/lucide-lab.js",
   "module": "dist/esm/lucide-lab.js",
-  "typings": "dist/lucide-lab.d.ts",
+  "types": "dist/lucide-lab.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "npm run clean && npm run copy:license && npm run build:icons && npm run build:bundle && npm run build:lib",
@@ -31,18 +33,5 @@
     "build:bundle": "rollup -c rollup.config.mjs",
     "clean": "rm -f src/icons/*.ts && rm -rf dist",
     "version": "npm run version --git-tag-version=false"
-  },
-  "devDependencies": {
-    "@lucide/build-icons": "^1.1.0",
-    "@lucide/helpers": "^1.0.0",
-    "@lucide/rollup-plugins": "1.0.0",
-    "minimist": "^1.2.8",
-    "prettier": "^2.3.2",
-    "rollup": "^4.9.2",
-    "rollup-plugin-dts": "^6.1.0",
-    "svgson": "^5.2.1"
-  },
-  "dependencies": {
-    "typescript": "^5.9.3"
   }
 }

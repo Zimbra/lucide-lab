@@ -1,14 +1,13 @@
 {
   "name": "lucide-lab",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
-  "main": "packages/lab/dist/cjs/lucide-lab.js",
-  "module": "packages/lab/dist/esm/lucide-lab.js",
-  "types": "packages/lab/dist/lucide-lab.d.ts",
-  "files": [
-    "packages/lab/dist"
-  ],
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "build": "cd packages/lab && npm i && npm run build"
@@ -17,7 +16,14 @@
     "@lucide/build-icons": "1.1.0",
     "@lucide/helpers": "1.0.0",
     "@types/bun": "latest",
-    "husky": "^9.1.7"
+    "husky": "^9.1.7",
+    "@lucide/rollup-plugins": "1.0.0",
+    "minimist": "^1.2.8",
+    "prettier": "^2.3.2",
+    "rollup": "^4.9.2",
+    "rollup-plugin-dts": "^6.1.0",
+    "svgson": "^5.2.1",
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
