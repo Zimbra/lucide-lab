@@ -4,17 +4,21 @@
   "description": "",
   "license": "ISC",
   "scripts": {
-    "compare": "bun ./scripts/compareIcons.ts"
+    "compare": "bun ./scripts/compareIcons.ts",
+    "prepare": "husky || true"
   },
   "devDependencies": {
-    "@types/bun": "latest",
     "@lucide/build-icons": "1.1.0",
-    "@lucide/helpers": "1.0.0"
+    "@lucide/helpers": "1.0.0",
+    "@types/bun": "latest",
+    "husky": "^9.1.7"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "engines": {
-    "bun": ">=1"
+    "bun": ">=1",
+    "node": ">=18.20.0",
+    "npm": ">=10.0.0"
   }
 }
