@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "delete",
+    "delete tag",
+    "delete bookmark",
+    "delete label"
+  ],
+  "categories": [
+    "design",
+    "mail"
+  ]
+}

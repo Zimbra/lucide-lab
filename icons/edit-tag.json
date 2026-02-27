@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "edit",
+    "edit tag",
+    "edit bookmark",
+    "edit label"
+  ],
+  "categories": [
+    "design",
+    "mail"
+  ]
+}
