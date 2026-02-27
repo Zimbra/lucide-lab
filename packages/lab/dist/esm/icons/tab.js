@@ -1,5 +1,5 @@
 /**
- * @license @lucide/lab v0.1.2 - ISC
+ * @license @zimbra/lucide-lab v0.1.2 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
