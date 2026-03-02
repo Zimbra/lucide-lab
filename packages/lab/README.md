@@ -3,15 +3,15 @@
 ## Installation
 
 ```sh
-npm install @lucide/lab
+npm install @zimbra/lucide-lab
 ```
 
 ```sh
-yarn add @lucide/lab
+yarn add @zimbra/lucide-lab
 ```
 
 ```sh
-pnpm install @lucide/lab
+pnpm install @zimbra/lucide-lab
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ pnpm install @lucide/lab
 ### React
 
 ```jsx
-import { burger } from '@lucide/lab';
+import { burger } from '@zimbra/lucide-lab';
 import { Icon } from 'lucide-react';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
 
 ```vue
 <script setup>
-import { burger } from '@lucide/lab';
+import { burger } from '@zimbra/lucide-lab';
 import {  } from 'lucide-vue-next';
 </script>
 
@@ -51,7 +51,7 @@ import {  } from 'lucide-vue-next';
 ```svelte
 <script>
 import { Icon } from 'lucide-svelte';
-import { burger, sausage } from '@lucide/lab';
+import { burger, sausage } from '@zimbra/lucide-lab';
 </script>
 
 <Icon iconNode={burger} />
@@ -61,7 +61,7 @@ import { burger, sausage } from '@lucide/lab';
 ### Solid
 
 ```jsx
-import { burger } from '@lucide/lab';
+import { burger } from '@zimbra/lucide-lab';
 import { Icon } from 'lucide-solid';
 
 function App() {
@@ -76,7 +76,7 @@ function App() {
 ### Preact
 
 ```jsx
-import { burger } from '@lucide/lab';
+import { burger } from '@zimbra/lucide-lab';
 import { Icon } from 'lucide-preact';
 
 function App() {
@@ -92,7 +92,7 @@ function App() {
 
 ```jsx
 
-import { burger } from '@lucide/lab';
+import { burger } from '@zimbra/lucide-lab';
 import { Icon } from 'lucide-react-native';
 
 function App() {
