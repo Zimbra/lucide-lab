@@ -1,0 +1,16 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "priority",
+    "important",
+    "alert",
+    "flag",
+    "notification"
+  ],
+  "categories": [
+    "alert",
+    "communication",
+    "status",
+    "notifications"
+  ]
+}
