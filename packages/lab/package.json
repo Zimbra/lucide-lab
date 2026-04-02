@@ -31,8 +31,8 @@
     "build:lib": "node ./scripts/buildLib.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
     "clean": "rm -f src/icons/*.ts && rm -rf dist",
-    "version": "npm run version --git-tag-version=false",
-    "prepublishOnly": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags"
+    "version": "if [ \"$CI\" != \"true\" ]; then npm run version --git-tag-version=false; fi",
+    "prepublishOnly": "if [ \"$CI\" != \"true\" ]; then npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags; fi"
   },
   "devDependencies": {
     "@lucide/rollup-plugins": "1.0.0",
