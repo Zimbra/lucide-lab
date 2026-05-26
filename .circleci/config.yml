@@ -46,14 +46,14 @@ feature-branch: &feature-branch
   filters:
     branches:
       ignore:
-        - master
+        - zimbra
         - /(custom_)?release\/.*/
 
-master-branch: &master-branch
+zimbra-branch: &zimbra-branch
   filters:
     branches:
       only:
-        - master
+        - zimbra
 
 ############################################################################
 # COMMANDS
@@ -163,13 +163,13 @@ workflows:
           requires:
             - publish-approval
 
-  master-branch-workflow:
+  zimbra-branch-workflow:
     jobs:
       - build:
-          <<: *master-branch
+          <<: *zimbra-branch
 
       - publish:
-          <<: *master-branch
+          <<: *zimbra-branch
           <<: *env-context
           requires:
             - build
