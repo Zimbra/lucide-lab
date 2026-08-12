@@ -1,0 +1,10 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "shared",
+    "file shared"
+  ],
+  "categories": [
+    "file icons"
+  ]
+}
