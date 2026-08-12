@@ -1,0 +1,13 @@
+{
+  "$schema": "../icon.schema.json",
+  "tags": [
+    "account external",
+    "mail sync",
+    "folder sync"
+  ],
+  "categories": [
+    "account",
+    "mail",
+    "communication"
+  ]
+}
