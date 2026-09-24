@@ -27,6 +27,7 @@
   "scripts": {
     "copy:license": "cp ../../LICENSE ./LICENSE",
     "build": "npm run clean && npm run copy:license && npm run build:icons && npm run build:bundle && npm run build:lib",
+    "prebuild": "node ./scripts/patchBuildIconsForNode24.mjs",
     "build:icons": "build-icons --output=./src --templateSrc=./scripts/exportTemplate.mjs --iconFileExtension=.ts --withAliases --exportModuleNameCasing=camel --renderUniqueKey --aliasNamesOnly --aliasesFileExtension=.ts --exportFileName=index.ts",
     "build:lib": "node ./scripts/buildLib.mjs",
     "build:bundle": "rollup -c rollup.config.mjs",
@@ -40,6 +41,7 @@
     "prettier": "^2.3.2",
     "rollup": "^4.9.2",
     "rollup-plugin-dts": "^6.1.0",
-    "svgson": "^5.2.1"
+    "svgson": "^5.2.1",
+    "typescript": "^5.0.0"
   }
 }
