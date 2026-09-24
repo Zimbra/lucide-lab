@@ -6,7 +6,7 @@ executors:
   node-executor:
     working_directory: ~/lucide-lab
     docker:
-      - image: cimg/node:20.20.0
+      - image: cimg/node:24.18
     resource_class: small
 
 env-context: &env-context
@@ -19,18 +19,18 @@ env-context: &env-context
 restore-dependencies-cache: &restore-dependencies-cache
   restore_cache:
     keys:
-      - v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}--{{ checksum "packages/lab/package.json" }}
+      - v2-dependencies-{{ .Branch }}-{{ checksum "package.json" }}--{{ checksum "packages/lab/package.json" }}
       # fallback to using the cache from the same branch
-      - v1-dependencies-{{ .Branch }}-
+      - v2-dependencies-{{ .Branch }}-
       # fallback to using the latest cache if no exact match is found
-      - v1-dependencies-
+      - v2-dependencies-
 
 save-dependencies-cache: &save-dependencies-cache
   save_cache:
     paths:
       - node_modules
       - packages/lab/node_modules
-    key: v1-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+    key: v2-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
 
 persist-workspace: &persist-workspace
   persist_to_workspace:
@@ -86,8 +86,6 @@ jobs:
       - run:
           name: Install dependencies
           command: |
-            npm install
-            cd packages/lab
             npm install
 
       - *save-dependencies-cache

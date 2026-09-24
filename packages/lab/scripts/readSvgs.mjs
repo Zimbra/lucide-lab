@@ -1,5 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import { basename } from 'path';
+import { basename } from 'node:path';
 import { readSvg } from  '@lucide/helpers';
 
 /**

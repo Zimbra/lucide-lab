@@ -1,5 +1,5 @@
-import { writeFile } from 'fs/promises';
-import { existsSync, unlinkSync, mkdirSync } from 'fs';
+import { writeFile } from 'node:fs/promises';
+import { existsSync, unlinkSync, mkdirSync } from 'node:fs';
 
 export default async function copyIcons(parsedSvgs, packageDir, license) {
   const iconsDirectory = `${packageDir}/icons`;

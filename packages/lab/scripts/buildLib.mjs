@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import getArgumentOptions from 'minimist';
 import { parseSync } from 'svgson';
 
@@ -9,7 +9,7 @@ import readSvgs from './readSvgs.mjs';
 import generateIconNodes from './generateIconNodes.mjs';
 import copyIcons from './copyIcons.mjs';
 
-import pkg from '../package.json' assert { type: 'json' };
+import pkg from '../package.json' with { type: 'json' };
 
 const cliArguments = getArgumentOptions(process.argv.slice(2));
 const createDirectory = (dir) => {
